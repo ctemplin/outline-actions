@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1000,
+        "order": 1,
+        "type": "concept",
+        "text": "Diet",
+        "children":
+        [
+            {
+                "id": 1001,
+                "order": 1,
+                "type": "concept",
+                "text": "What you do and _do not eat_ is the most important aspect of your diet.",
+                "children":
+                [
+                    {
+                        "id": 1002,
+                        "order": 1,
+                        "type": "concept",
+                        "text": "Reduce unsound foods as much as possible.",
+                        "children": 
+                        [
+                            {
+                                "id": 10003,
+                                "order": 1,
+                                "type": "action",
+                                "text": "Reduce excess Polyunsaturated Fatty Acids as much as possible.",
+                                "children":
+                                [
+                                    {
+                                        "id": 1004,
+                                        "order": 1,
+                                        "type": "clarification",
+                                        "text": "PUFAs include: Canola, Cotton seed, Corn, Soybean, Grape seed, Rice bran, Safflower, Sunflower, Vegetable oil"
+                                    },
+                                    {
+                                        "id": 1005,
+                                        "order": 2,
+                                        "type": "clarification",
+                                        "text": "Anything cooked at high temperature in these oils are especially bad. e.g. Deep-fried restaurant food."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 1006,
+                                "order": 2,
+                                "type": "action",
+                                "text": "Reduce plant reproductive products as much as possible.",
+                                "children":
+                                [
+                                    {
+                                        "id": 1007,
+                                        "order": 1,
+                                        "type": "clarification",
+                                        "text": "Grains, Nuts, Seeds, Beans, Legumes either whole or as butters, flours, meat-substitutes, etc."
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 1010,
+                                "order": 3,
+                                "type": "action",
+                                "text": "Reduce refined sugars as much as possible.",
+                                "children":
+                                [
+                                    {
+                                        "id": 1011,
+                                        "order": 1,
+                                        "type": "clarification",
+                                        "text": "Refined sugars include: Table sugar, Corn syrup, Agave syrup, Malitol, etc."
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+        
+            }
+        ]
+    },
+    {
+        "id": 1008,
+        "order": 2,
+        "type": "concept",
+        "text": "Movement",
+        "children":
+        [
+            {
+                "id": 1009,
+                "order": 1,
+                "type": "concept",
+                "text": "Move frequent through your current range of motion.",
+                "children":
+                [
+                ]
+        
+            }
+        ]
+    }
+
+]

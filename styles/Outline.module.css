@@ -1,0 +1,90 @@
+
+.outline {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.item {
+  padding-left: 2em;
+}
+
+@keyframes textGrow {
+  from {font-weight: base;}
+  to {font-weight: bolder;}
+}
+
+button.but:focus~span {
+  background-color: lightgray;
+  animation-name: textGrow;
+  animation-duration: 0.0s;
+  animation-fill-mode: forwards;
+}
+
+button.but {
+  font-family: 'Courier New', Courier, monospace; 
+  font-weight: bold;
+  transition: border-color .5s;
+  border:1px dotted transparent;
+  border-radius: 0.4em;
+}
+
+button.but:hover {
+  stroke:rosybrown
+}
+
+button.but:focus {
+  outline-width: 0px;
+  border: 1px dotted gray;
+  border-radius: 0.4em;
+}
+
+@keyframes hide {
+  from {max-height: 500px;}
+  to {max-height: 0px;}
+}
+
+.childrenHide {
+  visibility: hidden;
+  height: 0px;
+  animation-name: hide;
+  animation-duration: 10s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes show {
+  from {max-height: 0px;}
+  to {max-height: 500px;}
+}
+
+.childrenShow {
+  visibility: inherit;
+  height: auto;
+  overflow-y: hidden;
+  animation-name: show;
+  animation-duration: 10s;
+  animation-timing-function: ease-out;
+  ;
+}
+
+.concept {
+  color: grey;
+}
+
+.action {
+  color: red;
+}
+
+.clarification {
+  color: green;
+}
+
+.l1 {
+  color: #0070f3;
+}
+
+.mdParent {
+  display:inline;
+}
+
+.mdParent > p {
+  display:inline;
+}

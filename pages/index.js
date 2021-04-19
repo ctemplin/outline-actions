@@ -5,6 +5,7 @@ import React,{useState} from "react"
 import ReactMarkdown from "react-markdown"
 import gfm from "remark-gfm"
 import ItemGenericOutline from '../modules/outline'
+import MainTabs from '../modules/tabs'
 
 export async function getStaticProps() {
   return {
@@ -54,8 +55,9 @@ export default function Home() {
         </h2>
         <h3 className={styles.description}>
           An opionated guide to priorities, concepts and strategies.
-          <span className={styles.more}>(Learn more)</span>
         </h3>
+
+        <MainTabs />
         
 
         <div style={{textAlign: 'left', paddingLeft: '8rem', marginRight: '8rem'}}>

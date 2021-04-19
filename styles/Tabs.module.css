@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-inline: 10ex;
+    margin-bottom: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.tab {
+    width: 33%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.tab:first-child {
+    border-top-left-radius: 10px;
+}
+
+.tab:last-child {
+    border-top-right-radius: 10px;
+}
+
+.tab.active {
+    background-color: lightgrey;
+}
+
+.tab.inactive {
+    color: white;
+    background-color: grey;
+}
+
+.tab.inactive:hover {
+    color: white;
+    background-color: grey;
+    text-decoration: underline;
+    cursor: pointer;
+}

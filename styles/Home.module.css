@@ -10,11 +10,11 @@
 
 .main {
   /* margin: 2rem 0; */
+  width: 80vw;
   padding: 2rem 0;
   flex: 1;
-  display:flow-root;
+  display:flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: whitesmoke;
 }
@@ -52,7 +52,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .title,

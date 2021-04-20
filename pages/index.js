@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-
+import ts from '../styles/Tabs.module.css'
 import React,{useState} from "react"
 import ReactMarkdown from "react-markdown"
 import gfm from "remark-gfm"
@@ -22,6 +22,7 @@ function renderItem(data) {
 
 export default function Home() {
 
+  const [state, setState] = useState({activeContentIndex: 1})
   // react Hook For State Handler
   const [data , setData]=useState(null)
 
@@ -56,16 +57,24 @@ export default function Home() {
         <h3 className={styles.description}>
           An opionated guide to priorities, concepts and strategies.
         </h3>
+        <div className={ts.tabsAndContent}>
+          <MainTabs contentHandler={(activeTabIndex, e) => {setState({activeContentIndex: activeTabIndex})}} />
+          <div style={{textAlign: 'left', width: 'inherit', maxWidth: 'inherit'}}>
+            <div className={`${ts.tabContent} ${state.activeContentIndex == 0 ? ts.contentActive : ts.contentInactive}`}>
+              <div>
+                {
+                // use data State Variable For Get Data Use JavaScript Map Mathod
+                data? data.map(renderItem):""
+                }
+              </div>
+            </div>
+            <div className={`${ts.tabContent} ${state.activeContentIndex == 1 ? ts.contentActive : ts.contentInactive}`}>pyramid</div>
+            <div className={`${ts.tabContent} ${state.activeContentIndex == 2 ? ts.contentActive : ts.contentInactive}`}>
 
-        <MainTabs />
-        
 
-        <div style={{textAlign: 'left', paddingLeft: '8rem', marginRight: '8rem'}}>
-        {
-        // use data State Variable For Get Data Use JavaScript Map Mathod
-        data? data.map(renderItem):""
-        }
-       </div>
+            </div>
+          </div>
+        </div>
       </main>
 
       <footer className={styles.footer}>

@@ -1,15 +1,18 @@
+.tabsAndContent {
+    justify-content: center;
+    width: 66vw;
+}
+
 .container {
     display: flex;
     flex-direction: row;
+    width: inherit;
+    max-width: inherit;
     justify-content: center;
-    margin-inline: 10ex;
-    margin-bottom: 1rem;
-    align-items: center;
-    text-align: center;
 }
 
 .tab {
-    width: 33%;
+    width: 22vw;
     padding: 1rem;
     text-align: center;
 }
@@ -36,4 +39,17 @@
     background-color: grey;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.tabContent {
+
+}
+
+.contentActive {
+    background-color: lightgrey;
+}
+
+.contentInactive {
+    visibility: hidden;
+    max-height: 0px;
 }

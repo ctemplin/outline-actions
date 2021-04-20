@@ -43,6 +43,7 @@ class ItemGenericOutline extends ItemGeneric
   onChildToggle(event) {
     this.setState((state) => {
       return {...state, showKids: !this.state.showKids}
+      this.props.children[0].focus()
     })
   }
 
@@ -56,7 +57,7 @@ class ItemGenericOutline extends ItemGeneric
     return(
     <div className={this.getClasses()} key={this.props.id}> 
       <div>
-      {this.props.children ? <button className={outlineStyles.but} onClick={this.onChildToggle}>{!this.state.showKids ? "+" : "-" }</button> : ""} 
+      {this.props.children ? <button className={`${outlineStyles.button} ${outlineStyles.but}`} onClick={this.onChildToggle}>{!this.state.showKids ? "+" : "-" }</button> : ""} 
       <span style={{textAlign: 'right', paddingRight: '1ex'}}>
         {this.props.order}.
       </span>
@@ -71,4 +72,4 @@ class ItemGenericOutline extends ItemGeneric
   
 }
 
-export default ItemGenericOutline;
+export default React.forwardRef((props, ref) => <ItemGenericOutline {...props} innerRef={ref} />);

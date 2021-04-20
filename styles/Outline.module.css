@@ -20,6 +20,7 @@ button.but:focus~span {
 }
 
 button.but {
+  background-color: transparent;
   font-family: 'Courier New', Courier, monospace; 
   font-weight: bold;
   transition: border-color .5s;
@@ -37,17 +38,12 @@ button.but:focus {
   border-radius: 0.4em;
 }
 
-@keyframes hide {
-  from {max-height: 500px;}
-  to {max-height: 0px;}
-}
-
 .childrenHide {
+  display: flex;
+  max-height: 0px;
   visibility: hidden;
-  height: 0px;
-  animation-name: hide;
-  animation-duration: 10s;
-  animation-timing-function: ease-out;
+  transition: flex 2.5s ease-out;
+  flex: 1
 }
 
 @keyframes show {
@@ -60,9 +56,9 @@ button.but:focus {
   height: auto;
   overflow-y: hidden;
   animation-name: show;
-  animation-duration: 10s;
+  animation-duration: 2s;
+  animation-direction: normal;
   animation-timing-function: ease-out;
-  ;
 }
 
 .concept {

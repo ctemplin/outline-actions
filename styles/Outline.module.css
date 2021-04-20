@@ -25,6 +25,7 @@ button.but:focus~span {
 }
 
 button.but {
+  color: gray;
   background-color: transparent;
   font-family: 'Courier New', Courier, monospace; 
   font-weight: bold;
@@ -73,19 +74,19 @@ button.but:focus {
   max-width: 3ex;
   text-align: right; 
   padding-right: 1ex;
-  height:min-content;
+  height: min-content;
 }
 
 .concept {
-  color: grey;
+  color: darkslategrey;
 }
 
 .action {
-  color: red;
+  color:tomato;
 }
 
 .clarification {
-  color: green;
+  color: mediumseagreen;
 }
 
 .l1 {

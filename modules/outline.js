@@ -56,7 +56,7 @@ class ItemGenericOutline extends ItemGeneric
   render() {
     return(
     <div className={this.getClasses()} key={this.props.id}> 
-      <div>
+      <div className={outlineStyles.itemRow}>
       {this.props.children ? <button className={`${outlineStyles.button} ${outlineStyles.but}`} onClick={this.onChildToggle}>{!this.state.showKids ? "+" : "-" }</button> : ""} 
       <span style={{textAlign: 'right', paddingRight: '1ex'}}>
         {this.props.order}.

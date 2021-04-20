@@ -70,11 +70,47 @@
                                         "text": "Refined sugars include: Table sugar, Corn syrup, Agave syrup, Malitol, etc."
                                     }
                                 ]
+                            },
+                            {
+                                "id": 1015,
+                                "order": 4,
+                                "type": "clarification",
+                                "text": "Taking the three actions above will _eliminate the vast majority of prepackaged food._"
                             }
+                        ]
+                    },
+                    {
+                        "id": 1012,
+                        "order": 2,
+                        "type": "concept",
+                        "text": "Eat enough high quality protein.",
+                        "children": 
+                        [
+                            {}
                         ]
                     }
                 ]
         
+            },
+            {
+                "id": 1013,
+                "order": 2,
+                "type": "concept",
+                "text": "_When_ you do and do not eat is the second most important aspect of your diet.",
+                "children":
+                [
+                    {}
+                ]
+            },
+            {
+                "id": 1014,
+                "order": 3,
+                "type": "concept",
+                "text": "How much you eat, will take care of itself.",
+                "children":
+                [
+                    {}
+                ]
             }
         ]
     },

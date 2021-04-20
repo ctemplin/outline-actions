@@ -62,8 +62,12 @@ class ItemGenericOutline extends ItemGeneric
         : 
         <button className={`${outlineStyles.but} ${outlineStyles.noChildren}`}>-</button>
       } 
-      <span style={{textAlign: 'right', paddingRight: '1ex'}}>
-        {this.props.order}.
+      <span className={outlineStyles.order}>
+        {this.props.type == 'clarification' ? 
+          '\u2022'
+        :
+          this.props.order + '.'
+        }
       </span>
       <span><ReactMarkdown remarkPlugin={{gfm}} className={outlineStyles.mdParent} children={this.props.text} /></span>
       </div>

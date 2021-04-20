@@ -68,6 +68,14 @@ button.but:focus {
   animation-timing-function: ease-out;
 }
 
+.order {
+  width: 2ex;
+  max-width: 3ex;
+  text-align: right; 
+  padding-right: 1ex;
+  height:min-content;
+}
+
 .concept {
   color: grey;
 }

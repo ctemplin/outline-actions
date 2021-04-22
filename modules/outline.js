@@ -64,7 +64,7 @@ class ItemGenericOutline extends ItemGeneric
       } 
       <span className={outlineStyles.order}>
         {this.props.type == 'clarification' ? 
-          '\u2022'
+          '\u2E19'
         :
           this.props.order + '.'
         }

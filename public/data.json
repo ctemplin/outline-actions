@@ -3,16 +3,21 @@
         "id": 1000,
         "order": 1,
         "type": "concept",
-        "text": "Diet",
+        "text": "Diet is the most powerful lever you can pull to change your health.",
         "children":
         [
             {
                 "id": 1001,
                 "order": 1,
                 "type": "concept",
-                "text": "What you do and _do not eat_ is the most important aspect of your diet.",
+                "text": "__What__ you _do not eat_ is the most important aspect of your diet (followed by what you do).",
                 "children":
                 [
+                    {
+                        "id": 1021,
+                        "type": "clarification",
+                        "text": "Yes, this focus on denial is a bummer and wouldn't be neccessary if we lived the environment of our prehistoric ancestors. However, the reality is that the Western food environment is evolutionary novel and unsuited to health."
+                    },
                     {
                         "id": 1002,
                         "order": 1,
@@ -31,13 +36,19 @@
                                         "id": 1004,
                                         "order": 1,
                                         "type": "clarification",
-                                        "text": "PUFAs include: Canola, Cotton seed, Corn, Soybean, Grape seed, Rice bran, Safflower, Sunflower, Vegetable oil"
+                                        "text": "Major PUFA sources include: Canola oil, Cottonseed oil, Corn oil, Soybean oil, Grape seed oil, Rice bran, Safflower oil, Sunflower oil, Vegetable oil"
                                     },
                                     {
                                         "id": 1005,
-                                        "order": 2,
+                                        "order": null,
                                         "type": "clarification",
                                         "text": "Anything cooked at high temperature in these oils are especially bad. e.g. Deep-fried restaurant food."
+                                    },
+                                    {
+                                        "id": 1020,
+                                        "order": null,
+                                        "type": "clarification",
+                                        "text": "You cannot reduce PUFAs to zero, so don't try. About 1% of your calories will come from PUFAs found naturally in animal fats, olive oil, etc."
                                     }
                                 ]
                             },
@@ -83,7 +94,7 @@
                         "id": 1012,
                         "order": 2,
                         "type": "concept",
-                        "text": "Eat enough high quality protein.",
+                        "text": "Prioritize eating protein over fats and carbohydrates.",
                         "children": 
                         [
                             {}
@@ -99,17 +110,52 @@
                 "text": "_When_ you do and do not eat is the second most important aspect of your diet.",
                 "children":
                 [
-                    {}
+                    {
+                        "id": 1015,
+                        "order": 1,
+                        "type": "concept",
+                        "text": "Commit to a daily time window for _all_ eating. No calories outside the window.",
+                        "children":
+                        [
+                            {
+                                "id": 1016,
+                                "order": 1,
+                                "type": "action",
+                                "text": "Limit all calories to a eight hour window. e.g. 11 AM to 7 PM or 5 AM to 1 PM",
+                                "children":
+                                [
+                                    {
+                                        "id": 1017,
+                                        "order": 1,
+                                        "type": "clarification",
+                                        "text": "Eight hours is a good goal. You can expand or shrink this window if needed. Do not exceed tweleve hours or limit to less than 4 hours."
+                                    }
+                                ]
+                            }
+
+                        ]
+                    }
                 ]
             },
             {
                 "id": 1014,
                 "order": 3,
                 "type": "concept",
-                "text": "How much you eat, will take care of itself.",
+                "text": "If you eat the right foods at the right times, __you can eat as much or as little as you like__.",
                 "children":
                 [
-                    {}
+                    {
+                        "id": 1018,
+                        "order": null,
+                        "type": "clarification",
+                        "text": "In practice the higher satiety of these foods will prevent you from overeating. Admittedly, it's not impossible to overeat them, just unlikely to occurr regularly."
+                    },
+                    {
+                        "id": 1019,
+                        "order": null,
+                        "type": "clarification",
+                        "text": "In contrast, industrial prepackaged foods are designed to be irresistible, habit forming and only briefly satisfying."
+                    }
                 ]
             }
         ]

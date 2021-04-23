@@ -7,39 +7,39 @@ import gfm from "remark-gfm"
 import ItemGenericOutline from '../modules/outline'
 import MainTabs from '../modules/tabs'
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
+  const outlineData = await fetch(process.env.SITE_URL + "/data.json").then(res => res.json())
+
+  let actions = {"root": []}
+  function extractActions(item) {
+    if (item.type == "action") {
+      actions.root.push(item)
+    } else if (item.children) {
+        item.children.map(extractActions)
+    }
+    
+  }
+
+  outlineData.root.map(extractActions)
+
   return {
     props: {
+      outlineData: outlineData,
+      actions: actions
     }
   }
+
 }
 
-function renderItem(data) {
+function renderItem(item) {
     return (
-      <ItemGenericOutline {...data} />
+      <ItemGenericOutline {...item} />
     )
 }
 
-export default function Home() {
+export default function Home({outlineData, actions}) {
 
   const [state, setState] = useState({activeContentIndex: 1})
-  // react Hook For State Handler
-  const [data , setData]=useState(null)
-
-  // Fetch Function   
-  fetch("./data.json").then(
-    function(res){
-    return res.json()
-  }).then(function(data){
-  // store Data in State Data Variable
-    setData(data)
-  }).catch(
-    function(err){
-      console.log(err)
-    }
-  )
-
-
 
   return (
     <div className={styles.container}>
@@ -64,11 +64,15 @@ export default function Home() {
               <div>
                 {
                 // use data State Variable For Get Data Use JavaScript Map Mathod
-                data? data.map(renderItem):""
+                outlineData ? outlineData.root.map(renderItem):""
                 }
               </div>
             </div>
-            <div className={`${ts.tabContent} ${state.activeContentIndex == 1 ? ts.contentActive : ts.contentInactive}`}>pyramid</div>
+            <div className={`${ts.tabContent} ${state.activeContentIndex == 1 ? ts.contentActive : ts.contentInactive}`}>
+                {
+                  actions ? actions.root.map(function(item){return(<div>{item.text}</div>)}) : " "
+                }
+            </div>
             <div className={`${ts.tabContent} ${state.activeContentIndex == 2 ? ts.contentActive : ts.contentInactive}`}>
 
 

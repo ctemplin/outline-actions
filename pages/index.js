@@ -5,6 +5,7 @@ import React,{useState} from "react"
 import ReactMarkdown from "react-markdown"
 import gfm from "remark-gfm"
 import ItemGenericOutline from '../modules/outline'
+import ActionPyramid from '../modules/actionPyramid'
 import MainTabs from '../modules/tabs'
 
 export async function getStaticProps(context) {
@@ -71,9 +72,7 @@ export default function Home({outlineData, actions}) {
               </div>
             </div>
             <div className={`${ts.tabContent} ${state.activeContentIndex == 1 ? ts.contentActive : ts.contentInactive}`}>
-                {
-                  actions ? actions.root.map(function(item){return(<div>{item.level}={item.parentConceptOrder}*{item.order}-{item.text}</div>)}) : "no actions"
-                }
+              <ActionPyramid {...actions} />
             </div>
             <div className={`${ts.tabContent} ${state.activeContentIndex == 2 ? ts.contentActive : ts.contentInactive}`}>
 

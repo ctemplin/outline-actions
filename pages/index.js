@@ -10,17 +10,19 @@ import MainTabs from '../modules/tabs'
 export async function getStaticProps(context) {
   const outlineData = await fetch(process.env.SITE_URL + "/data.json").then(res => res.json())
 
+  // extract the outline items of type: action
   let actions = {"root": []}
-  function extractActions(item) {
+  function extractActions(parentConceptOrder, item) {
     if (item.type == "action") {
+      item.parentConceptOrder = parentConceptOrder
+      item.level = parentConceptOrder.reduce(function(a, b) {return a * b}, 1) * item.order
       actions.root.push(item)
     } else if (item.children) {
-        item.children.map(extractActions)
+      parentConceptOrder.push(item.order)
+      item.children.map(extractActions.bind(null, [...parentConceptOrder]))
     }
-    
   }
-
-  outlineData.root.map(extractActions)
+  outlineData.root.map(extractActions.bind(null, [1,]))
 
   return {
     props: {
@@ -70,7 +72,7 @@ export default function Home({outlineData, actions}) {
             </div>
             <div className={`${ts.tabContent} ${state.activeContentIndex == 1 ? ts.contentActive : ts.contentInactive}`}>
                 {
-                  actions ? actions.root.map(function(item){return(<div>{item.text}</div>)}) : " "
+                  actions ? actions.root.map(function(item){return(<div>{item.level}={item.parentConceptOrder}*{item.order}-{item.text}</div>)}) : "no actions"
                 }
             </div>
             <div className={`${ts.tabContent} ${state.activeContentIndex == 2 ? ts.contentActive : ts.contentInactive}`}>

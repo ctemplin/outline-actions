@@ -1,7 +1,7 @@
 import React,{useState} from "react"
 import ReactMarkdown from "react-markdown"
 import gfm from "remark-gfm"
-
+import ActionPyramidLevel from '../modules/actionPyramidLevel'
 import pyramid from '../styles/ActionPyramid.module.css'
 
 class ActionPyramid extends React.Component
@@ -10,7 +10,14 @@ class ActionPyramid extends React.Component
     super(props) 
     this.render = this.render.bind(this)
     this.getClasses = this.getClasses.bind(this)
-    this.render = this.render.bind(this)
+    this.extractLevels = this.extractLevels.bind(this)
+    this.renderLevels = this.renderLevels.bind(this)
+  }
+
+  extractLevels() {
+    let levels = new Set()
+    this.props.root.map(item => levels.add(item.level))
+    return levels
   }
 
   getClasses() {
@@ -18,12 +25,28 @@ class ActionPyramid extends React.Component
     return classNames.join(' ')
   }
 
+  extractActionsAtLevel(level){
+    let actions = []
+    this.props.root.map(action => action.level == level ? actions.push(action) : '')
+    return actions
+  }
+
+  renderLevels() {
+    const maxLevel = this.props.root.reduce((a, b) => Math.max(a,b.level), 1)
+    let content = []
+    for(let i=1; i<=maxLevel; i++){
+      let p = {"level": i, "actions": this.extractActionsAtLevel(i)}
+      content.push(<ActionPyramidLevel {...p} />)
+    }
+    return content
+  }
+
+
   render() {
+    const levels = this.extractLevels()
     return(
     <div className={this.getClasses()}>
-      {
-       this.props.root ? this.props.root.map(function(item){return(<div>{item.level}={item.parentConceptOrder}*{item.order}-{item.text}</div>)}) : "no actions" 
-      }
+      {this.renderLevels()}
     </div>
     )
   }

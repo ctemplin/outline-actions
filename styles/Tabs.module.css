@@ -45,6 +45,10 @@
     padding-right: 80px;
 }
 
+.pyramidContent {
+    padding: 1rem;
+}
+
 .contentActive {
     background-color: lightgrey;
 }

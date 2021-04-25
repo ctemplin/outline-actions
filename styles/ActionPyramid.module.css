@@ -1,4 +1,24 @@
 
 .actionPyramid {
+  text-align: center;
+}
+
+.division {
+  border-bottom: darkgrey solid thin;
+  min-height: min-content;
+}
+
+.levelLabel {
+  float: left;
   font-variant: small-caps;
+}
+
+.action {
+  display: inline-flex;
+  text-align: center;
+  width: 20vw;
+  border: thin solid grey;
+  border-radius: 2rem 2rem 0 0;
+  font-size: small;
+  padding: 1em;
 }

@@ -71,7 +71,7 @@ export default function Home({outlineData, actions}) {
                 }
               </div>
             </div>
-            <div className={`${ts.tabContent} ${state.activeContentIndex == 1 ? ts.contentActive : ts.contentInactive}`}>
+            <div className={`${ts.tabContent} ${ts.pyramidContent} ${state.activeContentIndex == 1 ? ts.contentActive : ts.contentInactive}`}>
               <ActionPyramid {...actions} />
             </div>
             <div className={`${ts.tabContent} ${state.activeContentIndex == 2 ? ts.contentActive : ts.contentInactive}`}>

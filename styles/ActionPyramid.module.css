@@ -5,11 +5,13 @@
 
 .division {
   display: inline-flex;
-  border-bottom: var(--darker) solid thin;
+  vertical-align: middle;
 }
 
 .levelLabel {
   float: left;
+  width:0;
+  white-space: nowrap;
   font-variant: small-caps;
 }
 
@@ -23,7 +25,6 @@
   text-align: center;
   width: 20vw;
   background-color: var(--light);
-  border: thin solid grey;
   font-size: small;
   padding: 1em;
 }

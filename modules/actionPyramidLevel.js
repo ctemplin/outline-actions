@@ -29,8 +29,8 @@ class ActionPyramidLevel extends React.Component
   render() {
     return(
     <div className={this.getClasses()}>
+      <div className={pyramid.levelLabel}>Level {this.props.level}:</div>
       <div className={pyramid.division}>
-        <span className={pyramid.levelLabel}>Level {this.props.level}:</span>
         <div className={pyramid.levelActions}>
           {this.props.actions.map(this.renderAction)}
         </div>

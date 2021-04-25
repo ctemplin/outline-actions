@@ -1,3 +1,20 @@
+/* :root {
+  --dark:   #000000;
+  --darker: #210E0D;
+  --medium: #653F20;
+  --lighter:#915F31;
+  --light:  #D99E96;  
+}
+ */
+
+ :root {
+  --dark:   #495867;
+  --darker: #577399;
+  --medium: #BDD5EA;
+  --lighter:#FE5F55;
+  --light:  #F7F7FF;  
+}
+
 html,
 body {
   padding: 0;

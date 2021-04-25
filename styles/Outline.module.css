@@ -19,14 +19,14 @@
 }
 
 button.but:focus~span {
-  background-color: lightgray;
+  background-color: var(--darker);
   animation-name: textGrow;
   animation-duration: 0.0s;
   animation-fill-mode: forwards;
 }
 
 button.but {
-  color: gray;
+  color:var(--medium);
   background-color: transparent;
   font-family: 'Courier New', Courier, monospace; 
   font-weight: bold;
@@ -43,7 +43,7 @@ button.noChildren {
 
 button.but:focus {
   outline-width: 0px;
-  border: 1px dotted gray;
+  border: 1px dotted var(--medium);
   border-radius: 0.4em;
 }
 
@@ -79,19 +79,19 @@ button.but:focus {
 }
 
 .concept {
-  color: darkslategrey;
+  color: var(--dark);
 }
 
 .action {
-  color:tomato;
+  color: var(--lighter);
 }
 
 .clarification {
-  color: mediumseagreen;
+  color: var(--lighter);
 }
 
 .l1 {
-  color: #0070f3;
+  color: var(--darker);
 }
 
 .mdParent {

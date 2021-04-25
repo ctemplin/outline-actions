@@ -4,8 +4,8 @@
 }
 
 .division {
-  border-bottom: darkgrey solid thin;
-  min-height: min-content;
+  display: inline-flex;
+  border-bottom: var(--darker) solid thin;
 }
 
 .levelLabel {
@@ -13,12 +13,27 @@
   font-variant: small-caps;
 }
 
+.levelActions {
+  display: inline-flex;
+}
+
 .action {
   display: inline-flex;
+  height: 100%;
   text-align: center;
   width: 20vw;
+  background-color: var(--light);
   border: thin solid grey;
-  border-radius: 2rem 2rem 0 0;
   font-size: small;
   padding: 1em;
+}
+
+.action:first-child 
+{
+  border-top-left-radius: 2rem;
+}
+
+.action:last-child 
+{
+  border-top-right-radius: 2rem;
 }

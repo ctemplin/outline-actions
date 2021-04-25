@@ -26,17 +26,17 @@
 }
 
 .tab.active {
-    background-color: lightgrey;
+    background-color: var(--medium);
 }
 
 .tab.inactive {
-    color: white;
-    background-color: grey;
+    color: var(--light);
+    background-color:var(--darker);
 }
 
 .tab.inactive:hover {
-    color: white;
-    background-color: grey;
+    color: var(--light);
+    background-color:var(--medium);
     text-decoration: underline;
     cursor: pointer;
 }
@@ -50,7 +50,7 @@
 }
 
 .contentActive {
-    background-color: lightgrey;
+    background-color: var(--medium);
 }
 
 .contentInactive {

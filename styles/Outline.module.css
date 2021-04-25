@@ -87,7 +87,7 @@ button.but:focus {
 }
 
 .clarification {
-  color: var(--lighter);
+  color: var(--darker);
 }
 
 .l1 {

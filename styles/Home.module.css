@@ -1,6 +1,15 @@
+@media (min-width: 401px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  .main {
+    width: 80vw;
+    padding: 2rem 0;
+  }
+}
+
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,8 +19,6 @@
 
 .main {
   /* margin: 2rem 0; */
-  width: 80vw;
-  padding: 2rem 0;
   flex: 1;
   display:flex;
   flex-direction: column;

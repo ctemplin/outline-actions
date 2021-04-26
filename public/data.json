@@ -97,7 +97,12 @@
                         "text": "Prioritize eating protein over fats and carbohydrates.",
                         "children": 
                         [
-                            {}
+                            {
+                                "id": 1021,
+                                "order": 1,
+                                "type": "action",
+                                "text": "Consume an average of 1 gram of protein per pound of \"ideal\" bodyweight per day."
+                            }
                         ]
                     }
                 ]

@@ -54,6 +54,14 @@
     cursor: pointer;
 }
 
+.outlineContent {
+    padding-right: 5rem;
+}
+
+.learnContent {
+    padding-right: 5rem;
+}
+
 .pyramidContent {
     padding: 1rem;
 }

@@ -18,7 +18,8 @@ class ItemGenericOutline extends ItemGeneric
     this.getClasses = this.getClasses.bind(this)
     this.onChildToggle = this.onChildToggle.bind(this)
     this.renderItem = this.renderItem.bind(this)
-    this.state = {showKids: false}
+    this.renderOrder = this.renderOrder.bind(this)
+    this.state = {showKids: true}
   }
 
   getClasses() {
@@ -53,6 +54,26 @@ class ItemGenericOutline extends ItemGeneric
     )
   }
 
+  renderOrder(item) {
+    let m = []
+    switch (item.type) {
+      case undefined:
+      case null:
+        m.push(' ')
+        break;
+      case 'clarification':
+        m.push('\u2E19')
+        break;
+      case 'reference':
+        m.push('\u2E20')
+        break;
+      default:
+        m.push(this.props.order + '.')
+        break;
+    }
+    return (m)
+  }
+
   render() {
     return(
     <div className={this.getClasses()} key={this.props.id}> 
@@ -63,11 +84,7 @@ class ItemGenericOutline extends ItemGeneric
         <button className={`${outlineStyles.but} ${outlineStyles.noChildren}`}>-</button>
       } 
       <span className={outlineStyles.order}>
-        {this.props.type == 'clarification' ? 
-          '\u2E19'
-        :
-          this.props.order + '.'
-        }
+        {this.renderOrder(this.props)}
       </span>
       <span><ReactMarkdown remarkPlugin={{gfm}} className={outlineStyles.mdParent} children={this.props.text} /></span>
       </div>

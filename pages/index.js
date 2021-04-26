@@ -45,17 +45,15 @@ export default function Home({outlineData, actions}) {
   const [state, setState] = useState({activeContentIndex: 1})
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container}`}>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main className={`sm:bg-blue-500 ${styles.main}`}>
         <h2 className={styles.title}>
-          Transitioning from a<br/>
-          Western Lifestyle of Disease to<br/>
-          Ancestral Health
+          From Modern Disease to Ancestral Health
         </h2>
         <h3 className={styles.description}>
           An opionated guide to priorities, concepts and strategies.
@@ -63,7 +61,7 @@ export default function Home({outlineData, actions}) {
         <div className={ts.tabsAndContent}>
           <MainTabs contentHandler={(activeTabIndex, e) => {setState({activeContentIndex: activeTabIndex})}} />
           <div style={{textAlign: 'left', width: 'inherit', maxWidth: 'inherit'}}>
-            <div className={`${ts.tabContent} ${state.activeContentIndex == 0 ? ts.contentActive : ts.contentInactive}`}>
+            <div className={`${ts.outlineContent} ${state.activeContentIndex == 0 ? ts.contentActive : ts.contentInactive}`}>
               <div>
                 {
                 // use data State Variable For Get Data Use JavaScript Map Mathod
@@ -71,10 +69,10 @@ export default function Home({outlineData, actions}) {
                 }
               </div>
             </div>
-            <div className={`${ts.tabContent} ${ts.pyramidContent} ${state.activeContentIndex == 1 ? ts.contentActive : ts.contentInactive}`}>
+            <div className={`${ts.pyramidContent} ${state.activeContentIndex == 1 ? ts.contentActive : ts.contentInactive}`}>
               <ActionPyramid {...actions} />
             </div>
-            <div className={`${ts.tabContent} ${state.activeContentIndex == 2 ? ts.contentActive : ts.contentInactive}`}>
+            <div className={`${ts.learnContent} ${state.activeContentIndex == 2 ? ts.contentActive : ts.contentInactive}`}>
 
 
             </div>

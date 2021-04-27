@@ -1,13 +1,12 @@
-@media (min-width: 401px) {
+/* @media (min-width: 401px) {
     .tabsAndContent {
         width: 66vw !important;
         padding-right: 80px;
     }
-}
+} */
 
 .tabsAndContent {
     justify-content: center;
-    width: 100vw;
 }
 
 .container {

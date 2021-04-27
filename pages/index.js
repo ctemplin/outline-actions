@@ -51,7 +51,7 @@ export default function Home({outlineData, actions}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={`sm:bg-blue-500 ${styles.main}`}>
+      <main className={`text-sm sm:text-md sm:w-11/12 sm:pr-80 sm:pl-80 ${styles.main}`}>
         <h2 className={styles.title}>
           From Modern Disease to Ancestral Health
         </h2>

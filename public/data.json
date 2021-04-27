@@ -49,6 +49,12 @@
                                         "order": null,
                                         "type": "clarification",
                                         "text": "You cannot reduce PUFAs to zero, so don't try. About 1% of your calories will come from PUFAs found naturally in animal fats, olive oil, etc."
+                                    },
+                                    {
+                                        "id": 1023,
+                                        "order": null,
+                                        "type": "reference",
+                                        "text": "[link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3761560/)"
                                     }
                                 ]
                             },
@@ -98,7 +104,7 @@
                         "children": 
                         [
                             {
-                                "id": 1021,
+                                "id": 1022,
                                 "order": 1,
                                 "type": "action",
                                 "text": "Consume an average of 1 gram of protein per pound of \"ideal\" bodyweight per day."

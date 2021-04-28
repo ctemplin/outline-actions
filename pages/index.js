@@ -9,7 +9,7 @@ import ActionPyramid from '../modules/actionPyramid'
 import MainTabs from '../modules/tabs'
 
 export async function getStaticProps(context) {
-  const outlineData = await fetch(`${process.env.DEPLOY_URL}/api/outline`).then(res => res.json())
+  const outlineData = await fetch(`${process.env.DATA_URL}`).then(res => res.json())
 
   // extract the outline items of type: action
   let actions = {"root": []}

@@ -1,4 +1,4 @@
-{"root": [
+export const outline = {"root": [
     {
         "id": 1000,
         "order": 1,
@@ -54,7 +54,7 @@
                                         "id": 1023,
                                         "order": null,
                                         "type": "reference",
-                                        "text": "[link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3761560/)"
+                                        "text": "[link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3761560/#S2title)"
                                     }
                                 ]
                             },

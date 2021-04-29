@@ -1,9 +1,9 @@
-/* @media (min-width: 401px) {
+@media screen and (min-width: 64em) {
     .tabsAndContent {
         width: 66vw !important;
         padding-right: 80px;
     }
-} */
+}
 
 .tabsAndContent {
     justify-content: center;

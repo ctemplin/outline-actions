@@ -44,7 +44,6 @@ class ItemGenericOutline extends ItemGeneric
   onChildToggle(event) {
     this.setState((state) => {
       return {...state, showKids: !this.state.showKids}
-      this.props.children[0].focus()
     })
   }
 

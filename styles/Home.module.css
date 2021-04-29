@@ -1,6 +1,31 @@
+/*
+Tailwind sizes
+@media (min-width: 640px) { ... }
+@media (min-width: 768px) { ... }
+@media (min-width: 1024px) { ... }
+@media (min-width: 1280px) { ... }
+*/
+
+/*
+PureCSS sizes
+sm	@media screen and (min-width: 35.5em)	≥ 568px	.pure-u-sm-*
+md	@media screen and (min-width: 48em)	≥ 768px	.pure-u-md-*
+lg	@media screen and (min-width: 64em)	≥ 1024px	.pure-u-lg-*
+xl	@media screen and (min-width: 80em)	≥ 1280px
+*/
+
 @import "importest.css" (min-width: 25em);
 
-@media (width >= 800px) {
+@media screen and (min-width: 35.5em)  {
+  .container {
+    padding: 0;
+  }
+  .main {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 64em) {
   .container {
     padding: 0 0.5rem;
   }

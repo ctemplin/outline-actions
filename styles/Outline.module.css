@@ -4,8 +4,21 @@
 }
 
 .item {
-  padding-left: 2em;
   overflow-x: hidden;
+}
+
+@media screen and (min-width: 35.5em) {
+  .item {
+    padding-left: 1em;
+    font-size: small;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .item {
+    padding-left: 2em;
+    font-size: inherit;
+  }
 }
 
 .itemRow {
@@ -19,10 +32,15 @@
 }
 
 button.but:focus~span {
-  background-color: var(--darker);
+  /* background-color: var(--darker); */
+  text-decoration: underline;
   animation-name: textGrow;
   animation-duration: 0.0s;
   animation-fill-mode: forwards;
+}
+button.but:focus~div {
+  /* background-color: var(--darker); */
+  text-decoration: underline;
 }
 
 button.but {

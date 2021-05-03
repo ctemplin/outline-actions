@@ -28,7 +28,8 @@ export async function getStaticProps(context) {
   return {
     props: {
       outlineData: outlineData,
-      actions: actions
+      actions: actions,
+      useSliders: process.env.USE_SLIDERS === 'true' ? true : false
     }
   }
 
@@ -40,7 +41,7 @@ function renderItem(item) {
     )
 }
 
-export default function Home({outlineData, actions}) {
+export default function Home({outlineData, actions, useSliders}) {
 
   const [state, setState] = useState({activeContentIndex: 1})
 
@@ -70,7 +71,7 @@ export default function Home({outlineData, actions}) {
               </div>
             </div>
             <div className={`${ts.pyramidContent} ${state.activeContentIndex == 1 ? ts.contentActive : ts.contentInactive}`}>
-              <ActionPyramid {...actions} />
+              <ActionPyramid {...actions} useSliders={useSliders} />
             </div>
             <div className={`${ts.learnContent} ${state.activeContentIndex == 2 ? ts.contentActive : ts.contentInactive}`}>
 

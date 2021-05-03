@@ -1,6 +1,5 @@
 import React,{useState} from "react"
-import ReactMarkdown from "react-markdown"
-import gfm from "remark-gfm"
+import ActionPyramidAction from "../modules/actionPyramidAction"
 
 import pyramid from '../styles/ActionPyramid.module.css'
 import outlineStyles from '../styles/Outline.module.css'
@@ -13,6 +12,7 @@ class ActionPyramidLevel extends React.Component
     this.getClasses = this.getClasses.bind(this)
     this.render = this.render.bind(this)
     this.renderAction = this.renderAction.bind(this)
+    this.clickHandler = this.clickHandler.bind(this)
   }
 
   getClasses() {
@@ -22,8 +22,12 @@ class ActionPyramidLevel extends React.Component
 
   renderAction(action) {
     return (
-      <ReactMarkdown remarkPlugin={{gfm}} className={pyramid.action} children={action.text} />
+      <ActionPyramidAction {...action} useSliders={this.props.useSliders}/>
     )
+  }
+
+  clickHandler(event) {
+    
   }
 
   render() {

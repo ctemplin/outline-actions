@@ -36,7 +36,7 @@ class ActionPyramid extends React.Component
     let content = []
     for(let i=1; i<=maxLevel; i++){
       let p = {"level": i, "actions": this.extractActionsAtLevel(i)}
-      content.push(<ActionPyramidLevel {...p} />)
+      content.push(<ActionPyramidLevel {...p} useSliders={this.props.useSliders} />)
     }
     return content
   }

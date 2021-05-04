@@ -15,15 +15,16 @@ export async function getStaticProps(context) {
   let actions = {"root": []}
   function extractActions(parentConceptOrder, item) {
     if (item.type == "action") {
-      item.parentConceptOrder = parentConceptOrder
-      item.level = parentConceptOrder.reduce((a, b) => a * b, 1) * item.order
+      item.parentConceptOrder = [...parentConceptOrder]
+      item.level = item.parentConceptOrder.reduce((a, b) => a * b, 1) * item.order
       actions.root.push(item)
     } else if (item.children) {
+      parentConceptOrder = [...parentConceptOrder]
       parentConceptOrder.push(item.order)
-      item.children.map(extractActions.bind(null, [...parentConceptOrder]))
+      item.children.map(extractActions.bind(null, parentConceptOrder))
     }
   }
-  outlineData.root.map(extractActions.bind(null, [1,]))
+  outlineData.root.map(extractActions.bind(null, []))
 
   return {
     props: {

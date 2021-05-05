@@ -28,6 +28,7 @@ export async function getStaticProps(context) {
 
   return {
     props: {
+      defaultPageTitle: process.env.DEFAULT_PAGE_TITLE,
       outlineData: outlineData,
       actions: actions,
       useSliders: process.env.USE_SLIDERS === 'true' ? true : false
@@ -42,14 +43,14 @@ function renderItem(item) {
     )
 }
 
-export default function Home({outlineData, actions, useSliders}) {
+export default function Home({defaultPageTitle, outlineData, actions, useSliders}) {
 
   const [state, setState] = useState({activeContentIndex: 1})
 
   return (
     <div className={`${styles.container}`}>
       <Head>
-        <title>Create Next App</title>
+        <title>{defaultPageTitle}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

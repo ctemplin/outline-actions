@@ -35,6 +35,7 @@ class ActionPyramidAction extends React.Component {
     return (
       <div key={this.props.id} className={pyramid.action}>
         <ReactMarkdown remarkPlugin={{ gfm }} children={this.props.text} />
+        {/* <span>{this.props.parentConceptOrder} * {this.props.order} = {this.props.level}</span> */}
           {this.props.useSliders ?
             <div>
             <input type="range" min="0" max="100" step="5" value={this.state.completePct} className={pyramid.slider}

@@ -85,7 +85,7 @@ class ItemGenericOutline extends ItemGeneric
       <span className={outlineStyles.order}>
         {this.renderOrder(this.props)}
       </span>
-      <span><ReactMarkdown remarkPlugin={{gfm}} className={outlineStyles.mdParent} children={this.props.text} /></span>
+      <span><ReactMarkdown remarkPlugin={{gfm}} className={outlineStyles.mdParent} children={this.props.text} linkTarget="_blank" /></span>
       </div>
       <div className={!this.state.showKids ? outlineStyles.childrenHide : outlineStyles.childrenShow}>
       {this.props.children ? this.props.children.map(this.renderItem) : ""}

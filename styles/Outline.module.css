@@ -116,6 +116,11 @@ button.but:focus {
   display:inline;
 }
 
+.mdParent a {
+  color: var(--lighter);
+  text-decoration: underline;
+}
+
 .mdParent > p {
   display:inline;
 }

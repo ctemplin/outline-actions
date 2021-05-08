@@ -78,7 +78,7 @@ class ItemGenericOutline extends ItemGeneric
     <div className={this.getClasses()} key={this.props.id}> 
       <div className={outlineStyles.itemRow}>
       {this.props.children ? 
-        <button className={`${outlineStyles.button} ${outlineStyles.but}`} onClick={this.onChildToggle}>{!this.state.showKids ? "+" : "-" }</button>
+        <button className={`${outlineStyles.button} ${outlineStyles.but}`} onClick={this.onChildToggle}>{!this.state.showKids ? "\u25B7" : "\u25BD" }</button>
         : 
         <button className={`${outlineStyles.but} ${outlineStyles.noChildren}`}>-</button>
       } 

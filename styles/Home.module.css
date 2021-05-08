@@ -27,11 +27,11 @@ xl	@media screen and (min-width: 80em)	≥ 1280px
 
 @media screen and (min-width: 64em) {
   .container {
-    padding: 0 0.5rem;
+    padding: 2rem;
   }
   .main {
-    width: 80vw;
-    padding: 2rem 0;
+    padding: 1rem;
+    margin: 0 10rem;
   }
 }
 
@@ -85,7 +85,7 @@ xl	@media screen and (min-width: 80em)	≥ 1280px
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 2.1rem;
+  font-size: 2.0rem;
   letter-spacing: 0em;
 }
 
@@ -95,8 +95,9 @@ xl	@media screen and (min-width: 80em)	≥ 1280px
 }
 
 .description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+  line-height: 1;
+  font-size: 0.9rem;
+  margin-block-start: 0.5rem;
 }
 
 .more {

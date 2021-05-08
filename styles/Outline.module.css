@@ -24,8 +24,21 @@
 .itemRow {
   display: flex;
   flex-direction: row;
+  padding-bottom: 1em;
 }
 
+.outlineContent > div > .item > .itemRow > span {
+  font-size:1.4rem;
+}
+
+.outlineContent > div > .item > .itemRow > button.but {
+  line-height:  2em;
+}
+
+.orderAndText {
+  display: flex;
+  flex-direction: row;
+}
 @keyframes textGrow {
   from {font-weight: base;}
   to {font-weight: bolder;}
@@ -51,7 +64,7 @@ button.but {
   transition: border-color .5s;
   border:1px dotted transparent;
   border-radius: 0.4em;
-  height: min-content;
+  height: 1.4rem;
 }
 
 button.noChildren {

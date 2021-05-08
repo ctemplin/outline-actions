@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import ts from '../styles/Tabs.module.css'
+import outlineStyles from '../styles/Outline.module.css'
 import React,{useState} from "react"
 import ReactMarkdown from "react-markdown"
 import gfm from "remark-gfm"
@@ -64,7 +65,7 @@ export default function Home({defaultPageTitle, outlineData, actions, useSliders
         <div className={ts.tabsAndContent}>
           <MainTabs contentHandler={(activeTabIndex, e) => {setState({activeContentIndex: activeTabIndex})}} />
           <div style={{textAlign: 'left', width: 'inherit', maxWidth: 'inherit'}}>
-            <div className={`${ts.outlineContent} ${state.activeContentIndex == 0 ? ts.contentActive : ts.contentInactive}`}>
+            <div className={`${ts.outlineContent} ${outlineStyles.outlineContent} ${state.activeContentIndex == 0 ? ts.contentActive : ts.contentInactive}`}>
               <div>
                 {
                 // use data State Variable For Get Data Use JavaScript Map Mathod

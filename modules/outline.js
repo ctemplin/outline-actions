@@ -49,7 +49,7 @@ class ItemGenericOutline extends ItemGeneric
 
   renderItem(data) {
     return (
-      <ItemGenericOutline {...data} />
+      <ItemGenericOutline {...data} key={data.id}/>
     )
   }
 
@@ -75,7 +75,7 @@ class ItemGenericOutline extends ItemGeneric
 
   render() {
     return(
-    <div className={this.getClasses()} key={this.props.id}> 
+    <div className={this.getClasses()}> 
       <div className={outlineStyles.itemRow}>
       {this.props.children ? 
         <button className={`${outlineStyles.button} ${outlineStyles.but}`} onClick={this.onChildToggle}>{!this.state.showKids ? "\u25B7" : "\u25BD" }</button>

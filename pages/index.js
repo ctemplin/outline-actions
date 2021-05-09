@@ -39,7 +39,7 @@ export async function getStaticProps(context) {
 
 function renderItem(item) {
     return (
-      <ItemGenericOutline {...item} />
+      <ItemGenericOutline {...item} key={item.id} />
     )
 }
 

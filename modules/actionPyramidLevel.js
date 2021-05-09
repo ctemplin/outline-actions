@@ -22,7 +22,7 @@ class ActionPyramidLevel extends React.Component
 
   renderAction(action) {
     return (
-      <ActionPyramidAction {...action} useSliders={this.props.useSliders}/>
+      <ActionPyramidAction {...action} useSliders={this.props.useSliders} key={"apa" + action.id}/>
     )
   }
 

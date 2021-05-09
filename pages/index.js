@@ -29,7 +29,6 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      defaultPageTitle: process.env.DEFAULT_PAGE_TITLE,
       outlineData: outlineData,
       actions: actions,
       useSliders: process.env.USE_SLIDERS === 'true' ? true : false
@@ -44,23 +43,23 @@ function renderItem(item) {
     )
 }
 
-export default function Home({defaultPageTitle, outlineData, actions, useSliders}) {
+export default function Home({outlineData, actions, useSliders}) {
 
   const [state, setState] = useState({activeContentIndex: 1})
 
   return (
     <div className={`${styles.container}`}>
       <Head>
-        <title>{defaultPageTitle}</title>
+        <title>{outlineData.headerText}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={`${styles.main}`}>
         <h2 className={styles.title}>
-          From Modern Disease to Ancestral Health
+          {outlineData.headerText}
         </h2>
         <h3 className={styles.description}>
-          An opionated guide to priorities, concepts and strategies.
+          {outlineData.subheaderText}
         </h3>
         <div className={ts.tabsAndContent}>
           <MainTabs contentHandler={(activeTabIndex, e) => {setState({activeContentIndex: activeTabIndex})}} />

@@ -49,8 +49,13 @@
 .tab.inactive:hover {
     color: var(--light);
     background-color:var(--medium);
-    text-decoration: underline;
     cursor: pointer;
+}
+
+.tab span.icon {
+    vertical-align: text-bottom;
+    letter-spacing: 0.4em;
+    text-decoration: none !important;
 }
 
 .outlineContent {
@@ -60,7 +65,7 @@
 
 .extraTabContent {
     padding: 1rem;
-    padding-right: 5rem;
+    padding-left: 5rem;
 }
 
 .pyramidContent {

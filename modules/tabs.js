@@ -21,13 +21,13 @@ class MainTabs extends React.Component {
     const ts = tabStyles;
     return(
       <div className={ts.container}>
-        <span className={`${ts.tab} ${this.state.activeTabIndex == 0 ? ts.active : ts.inactive}`}><a onClick={(e) => this.onTabClick(0, e)}>Concept Outline</a></span>
-        <span className={`${ts.tab} ${this.state.activeTabIndex == 1 ? ts.active : ts.inactive}`}><a onClick={(e) => this.onTabClick(1, e)}>Action Pyramid</a></span>
+        <span className={`${ts.tab} ${this.state.activeTabIndex == 0 ? ts.active : ts.inactive}`} onClick={(e) => this.onTabClick(0, e)}><span className={ts.icon}>{'\u25A4'}</span><span>Concept Outline</span></span>
+        <span className={`${ts.tab} ${this.state.activeTabIndex == 1 ? ts.active : ts.inactive}`} onClick={(e) => this.onTabClick(1, e)}><span className={ts.icon}>{'\u25EC'}</span><span>{'Action Pyramid'}</span></span>
         
         {
           this.props.extraTabs ? 
           this.props.extraTabs.map((extraTab, index) => 
-            <span className={`${ts.tab} ${this.state.activeTabIndex == (2 + index) ? ts.active : ts.inactive}`}><a onClick={(e) => this.onTabClick(2 + index, e)}>{extraTab.name}</a></span>
+            <span className={`${ts.tab} ${this.state.activeTabIndex == (2 + index) ? ts.active : ts.inactive}`} onClick={(e) => this.onTabClick(2 + index, e)}><span className={ts.icon}>{extraTab.icon}</span><span>{extraTab.name}</span></span>
           )
           :""
         }

@@ -59,7 +59,7 @@
 }
 
 .extraTabContent {
-    padding-top: 1rem;
+    padding: 1rem;
     padding-right: 5rem;
 }
 
@@ -69,6 +69,7 @@
 
 .contentActive {
     background-color: var(--medium);
+    min-height: 70vh;
 }
 
 .contentInactive {

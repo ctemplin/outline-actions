@@ -62,7 +62,7 @@ export default function Home({outlineData, actions, useSliders}) {
           {outlineData.subheaderText}
         </h3>
         <div className={ts.tabsAndContent}>
-          <MainTabs contentHandler={(activeTabIndex, e) => {setState({activeContentIndex: activeTabIndex})}} />
+          <MainTabs extraTabs={outlineData.extraTabs} contentHandler={(activeTabIndex, e) => {setState({activeContentIndex: activeTabIndex})}} />
           <div style={{textAlign: 'left', width: 'inherit', maxWidth: 'inherit'}}>
             <div className={`${ts.outlineContent} ${outlineStyles.outlineContent} ${state.activeContentIndex == 0 ? ts.contentActive : ts.contentInactive}`}>
               <div>
@@ -75,10 +75,15 @@ export default function Home({outlineData, actions, useSliders}) {
             <div className={`${ts.pyramidContent} ${state.activeContentIndex == 1 ? ts.contentActive : ts.contentInactive}`}>
               <ActionPyramid {...actions} useSliders={useSliders} />
             </div>
-            <div className={`${ts.learnContent} ${state.activeContentIndex == 2 ? ts.contentActive : ts.contentInactive}`}>
-
-
-            </div>
+            {
+              outlineData.extraTabs ?
+                outlineData.extraTabs.map((tabData, index) => 
+                <div className={`${ts.learnContent} ${state.activeContentIndex == (2 + index) ? ts.contentActive : ts.contentInactive}`}>
+                  <ReactMarkdown remarkPlugins={[gfm]} className={outlineStyles.mdParent} children={tabData.content} linkTarget="_blank" />
+                </div>)
+              :
+              ""
+            }
           </div>
         </div>
       </main>

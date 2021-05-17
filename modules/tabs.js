@@ -23,7 +23,15 @@ class MainTabs extends React.Component {
       <div className={ts.container}>
         <span className={`${ts.tab} ${this.state.activeTabIndex == 0 ? ts.active : ts.inactive}`}><a onClick={(e) => this.onTabClick(0, e)}>Concept Outline</a></span>
         <span className={`${ts.tab} ${this.state.activeTabIndex == 1 ? ts.active : ts.inactive}`}><a onClick={(e) => this.onTabClick(1, e)}>Action Pyramid</a></span>
-        <span className={`${ts.tab} ${this.state.activeTabIndex == 2 ? ts.active : ts.inactive}`}><a onClick={(e) => this.onTabClick(2, e)}>Learn More</a></span>
+        
+        {
+          this.props.extraTabs ? 
+          this.props.extraTabs.map((extraTab, index) => 
+            <span className={`${ts.tab} ${this.state.activeTabIndex == (2 + index) ? ts.active : ts.inactive}`}><a onClick={(e) => this.onTabClick(2 + index, e)}>{extraTab.name}</a></span>
+          )
+          :""
+        }
+        
       </div>
     )
   }

@@ -17,7 +17,11 @@ export async function getStaticProps(context) {
   function extractActions(parentConceptOrder, item) {
     if (item.type == "action") {
       item.parentConceptOrder = [...parentConceptOrder]
-      item.level = item.parentConceptOrder.reduce((a, b) => a * b, 1) * item.order
+      // Honor the level as forced/specified in the data.
+      // Otherwise, calculate it.
+      if (!item.level || item.level == null) {
+        item.level = item.parentConceptOrder.reduce((a, b) => a * b, 1) * item.order
+      }
       actions.root.push(item)
     } else if (item.children) {
       parentConceptOrder = [...parentConceptOrder]

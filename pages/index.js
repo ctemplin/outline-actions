@@ -79,7 +79,7 @@ export default function Home({outlineData, actions, useSliders}) {
               outlineData.extraTabs ?
                 outlineData.extraTabs.map((tabData, index) => 
                 <div className={`${ts.extraTabContent} ${state.activeContentIndex == (2 + index) ? ts.contentActive : ts.contentInactive}`}>
-                  <ReactMarkdown remarkPlugins={[gfm]} className={outlineStyles.mdParent} children={tabData.content} linkTarget="_blank" />
+                  <ReactMarkdown remarkPlugins={[gfm]} children={tabData.content} linkTarget="_blank" />
                 </div>)
               :
               ""

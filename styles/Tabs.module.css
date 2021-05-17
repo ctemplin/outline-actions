@@ -58,7 +58,8 @@
     padding-top: 1rem;
 }
 
-.learnContent {
+.extraTabContent {
+    padding-top: 1rem;
     padding-right: 5rem;
 }
 
@@ -71,6 +72,6 @@
 }
 
 .contentInactive {
-    visibility: hidden;
+    display: none;
     max-height: 0px;
 }

@@ -41,9 +41,9 @@ export async function getStaticProps(context) {
 
 }
 
-function renderItem(item) {
+function renderItem(childrenExpandDefault, item) {
     return (
-      <ItemGenericOutline {...item} key={item.id} />
+      <ItemGenericOutline {...item} key={item.id} childrenExpandDefault={childrenExpandDefault} />
     )
 }
 
@@ -72,7 +72,7 @@ export default function Home({outlineData, actions, useSliders}) {
               <div>
                 {
                 // use data State Variable For Get Data Use JavaScript Map Mathod
-                outlineData ? outlineData.root.map(renderItem):""
+                outlineData ? outlineData.root.map(renderItem.bind(null, outlineData.childrenExpandDefault)):""
                 }
               </div>
             </div>

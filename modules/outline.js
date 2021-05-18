@@ -19,7 +19,13 @@ class ItemGenericOutline extends ItemGeneric
     this.onChildToggle = this.onChildToggle.bind(this)
     this.renderItem = this.renderItem.bind(this)
     this.renderOrder = this.renderOrder.bind(this)
-    this.state = {showKids: true}
+
+    // Set to the app-wide default
+    let showKids = props.childrenExpandDefault
+    // Override if specified for specific item
+    if (props.childrenExpand && props.childrenExpand != null)
+      showKids = props.childrenExpand
+    this.state = {showKids: showKids}
   }
 
   getClasses() {

@@ -94,12 +94,12 @@ export default function Home({outlineData, actions, useSliders}) {
 
       <footer className={styles.footer}>
         <a
-          href="https://example.com"
+          href="https://github.com/ctemplin/outline-actions"
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          Placeholder
+          ActionOutline
         </a>
       </footer>
     </div>
